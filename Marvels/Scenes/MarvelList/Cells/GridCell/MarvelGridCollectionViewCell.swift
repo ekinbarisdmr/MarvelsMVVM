@@ -6,7 +6,7 @@
 //
 
 import UIKit
-import SDWebImage
+import Kingfisher
 
 
 protocol MarvelGridCollectionViewCellDataSource {
@@ -33,7 +33,7 @@ class MarvelGridCollectionViewCell: UICollectionViewCell {
     }
     
     func reloadData() {
-        avatarImg.sd_setImage(with: dataSource?.imageForCell(self), placeholderImage: nil, options: SDWebImageOptions(), context: nil)
+        avatarImg.kf.setImage(with: dataSource?.imageForCell(self), placeholder: nil, options: [.transition(.fade(1))], progressBlock: nil, completionHandler: nil)
         avatarImg.clipsToBounds = true
         nameLbl.text = dataSource?.titleForCell(self)
         seriesLbl.text = dataSource?.seriesForCell(self)

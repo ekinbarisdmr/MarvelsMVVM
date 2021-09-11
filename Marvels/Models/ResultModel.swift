@@ -7,10 +7,7 @@
 
 import Foundation
 import UIKit
-import ObjectMapper
-
-
-class ResultModel: BaseResponseModel {
+class ResultModel: Codable {
     
     
     var id: Int?
@@ -24,27 +21,10 @@ class ResultModel: BaseResponseModel {
     var events: Events?
     var urls: [Urls]?
     
-    required convenience init?(map: Map) {
-        self.init()
-    }
-    
-    override func mapping(map: Map) {
-        super.mapping(map: map)
-        id <- map["id"]
-        name <- map["name"]
-        description <- map["description"]
-        thumbnail <- map["thumbnail"]
-        resourceURI <- map["resourceURI"]
-        comics <- map["comics"]
-        series <- map["series"]
-        stories <- map["stories"]
-        events <- map["events"]
-        urls <- map["urls"]
-
-    }
+ 
 }
 
-class Thumbnail: BaseResponseModel {
+class Thumbnail: Codable {
     var path: String?
     var `extension`: String?
 
@@ -53,168 +33,76 @@ class Thumbnail: BaseResponseModel {
         case path = "path"
     }
     
-    required convenience init?(map: Map) {
-        self.init()
-    }
-    
-    override func mapping(map: Map) {
-        super.mapping(map: map)
-        path <- map["path"]
-        `extension` <- map["`extension`"]
-        
-    }
+
 }
 
 
-class Comics: BaseResponseModel {
+class Comics: Codable {
     var available: Int?
     var collectionURI: String?
     var items: [Itemm]?
     var returned: Int?
     
-    required convenience init?(map: Map) {
-        self.init()
-    }
-    
-    override func mapping(map: Map) {
-        super.mapping(map: map)
-        available <- map["available"]
-        collectionURI <- map["collectionURI"]
-        items <- map["items"]
-        returned <- map["returned"]
 
-        
-    }
     
 }
-class Urls: BaseResponseModel {
+class Urls: Codable {
     var type: String?
     var url: String?
     
-    required convenience init?(map: Map) {
-        self.init()
-    }
-    
-    override func mapping(map: Map) {
-        super.mapping(map: map)
-        type <- map["type"]
-        url <- map["url"]
-        
-    }
+
 }
 
-class Itemm: BaseResponseModel {
+class Itemm: Codable {
     var resourceURI: String?
     var name: String?
     
-    required convenience init?(map: Map) {
-        self.init()
-    }
-    
-    override func mapping(map: Map) {
-        super.mapping(map: map)
-        resourceURI <- map["resourceURI"]
-        name <- map["name"]
-        
-    }
+
 }
 
 
-class Series: BaseResponseModel {
+class Series: Codable {
     var available: Int?
     var collectionURI: String?
     var items: [Itemm]?
     var returned: Int?
     
-    required convenience init?(map: Map) {
-        self.init()
-    }
-    
-    override func mapping(map: Map) {
-        super.mapping(map: map)
-        available <- map["available"]
-        collectionURI <- map["collectionURI"]
-        items <- map["items"]
-        returned <- map["returned"]
 
-    }
 }
 
-class Stories: BaseResponseModel {
+class Stories: Codable {
     var available: Int?
     var collectionURI: String?
     var items: [Itemss]?
     var returned: Int?
     
-    required convenience init?(map: Map) {
-        self.init()
-    }
-    
-    override func mapping(map: Map) {
-        super.mapping(map: map)
-        available <- map["available"]
-        collectionURI <- map["collectionURI"]
-        items <- map["items"]
-        returned <- map["returned"]
-        
-    }
+
 }
 
-class Itemss: BaseResponseModel {
+class Itemss: Codable {
     var resourceURl: String?
     var name: String?
     var type: String?
     
-    required convenience init?(map: Map) {
-        self.init()
-    }
-    
-    override func mapping(map: Map) {
-        super.mapping(map: map)
-        resourceURl <- map["resourceURl"]
-        name <- map["name"]
-        type <- map["type"]
 
-    }
 }
 
-class Events: BaseResponseModel {
+class Events: Codable {
     var available: Int?
     var collectionURI: String?
     var items: [Itemm]?
     var returned: Int?
     
-    required convenience init?(map: Map) {
-        self.init()
-    }
-    
-    override func mapping(map: Map) {
-        super.mapping(map: map)
-        available <- map["available"]
-        collectionURI <- map["collectionURI"]
-        items <- map["items"]
-        returned <- map["returned"]
-        
-    }
+
 }
 
 
 
-class Items : BaseResponseModel {
+class Items : Codable {
     var resourceURI : String?
     var name : String?
     var role : String?
+
     
-    required convenience init?(map: Map) {
-        self.init()
-    }
-    
-    override func mapping(map: Map) {
-        super.mapping(map: map)
-        resourceURI <- map["resourceURI"]
-        name <- map["name"]
-        role <- map["role"]
-        
-    }
 }
 

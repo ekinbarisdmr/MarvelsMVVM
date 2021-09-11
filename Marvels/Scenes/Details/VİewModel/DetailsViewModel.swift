@@ -7,7 +7,7 @@
 
 import Foundation
 import UIKit
-import SDWebImage
+import Kingfisher
 
 
 protocol DetailsViewModelDelegate {
@@ -34,19 +34,6 @@ class DetailsViewModel: NSObject {
         
 
     }
-    
-//    func fetchMarvelModel() {
-//        API.sharedManager.getDetails(characterId: self.marvelId) { (response, error) in
-//            if error != nil {
-//                print("Err")
-//            }
-//            else {
-//                if let marvelModel = response {
-//                    self.detailModel = marvelModel
-//                }
-//            }
-//        }
-//    }
     
     func requestLike() {
         if likeArray.contains(where: { $0.characterId == String(self.marvelId) }) {

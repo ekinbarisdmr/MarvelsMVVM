@@ -8,9 +8,8 @@ target 'Marvels' do
   # Pods for Marvels
 
  pod 'Alamofire', '~> 4.9.1'
-  pod 'SDWebImage', '~> 5.0'
-  pod 'MBProgressHUD'
-  pod 'ObjectMapper', '~> 3.5'
-  pod 'AlamofireObjectMapper'
+ pod 'MBProgressHUD'
+ pod 'Kingfisher'
+
 
 end

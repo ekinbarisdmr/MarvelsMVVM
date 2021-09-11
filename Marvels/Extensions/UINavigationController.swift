@@ -17,7 +17,8 @@ extension UINavigationController {
          } else {
              statusBarFrame = UIApplication.shared.statusBarFrame
          }
-        let topInset: CGFloat = UIApplication.shared.keyWindow?.safeAreaInsets.top ?? statusBarFrame.height
+        let window = UIApplication.shared.windows.filter {$0.isKeyWindow}.first
+        let topInset: CGFloat = window?.safeAreaInsets.top ?? statusBarFrame.height
 
         let statusBarView = UIView(frame: CGRect(x: statusBarFrame.origin.x, y: statusBarFrame.origin.y, width: statusBarFrame.width, height: topInset))
 

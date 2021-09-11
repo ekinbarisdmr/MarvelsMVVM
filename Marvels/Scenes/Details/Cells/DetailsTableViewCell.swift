@@ -6,7 +6,7 @@
 //
 
 import UIKit
-import SDWebImage
+import Kingfisher
 
 
 protocol DetailsTableViewCellDataSource {
@@ -46,7 +46,7 @@ class DetailsTableViewCell: UITableViewCell {
         eventsLabel.text = dataSource?.eventsForCell(self)
         seriesLabel.text = dataSource?.seriesForCell(self)
         storiesLabel.text = dataSource?.storiesForCell(self)
-        avatarImg.sd_setImage(with: dataSource?.imageForCell(self), placeholderImage: nil, options: SDWebImageOptions(), context: nil)
+        avatarImg.kf.setImage(with: dataSource?.imageForCell(self), placeholder: nil, options: [.transition(.fade(1))], progressBlock: nil, completionHandler: nil)
     }
     
     @IBAction func reviewButton(_ sender: Any) {

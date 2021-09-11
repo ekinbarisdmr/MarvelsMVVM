@@ -30,20 +30,18 @@ class MarvelListViewModel: NSObject {
     
     
     func fetchMarvels() {
-        API.sharedManager.getMarvels(itemCount: self.itemCount) { (response, error ) in
-            if error != nil {
-                print("Error on VC")
+        
+        API.sharedManager.getMarvels(itemCount: self.itemCount) { [self] (response) in
+            if let marvelList = response.data?.results {
+                self.marvelList = marvelList
+                self.delegate?.changedStatus(status: .completed(nil))
             }
-            else {
-                if let marvelList = response?.data?.results {
-                    self.marvelList.append(contentsOf: marvelList)
-                    self.delegate?.changedStatus(status: .completed(error))
-                }
-            }
+            itemCount += 20
+        } errorHandler: { (error) in
+            print(error)
         }
-        itemCount += 20
+        
     }
-    
     //    MARK: SetupCollectionView
     
     func setupCollectionView() {

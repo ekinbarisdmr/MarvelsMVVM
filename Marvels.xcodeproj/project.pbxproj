@@ -15,7 +15,6 @@
 		3116641D26C6B42C002A030F /* MarvelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3116641C26C6B42C002A030F /* MarvelViewController.swift */; };
 		3116641F26C6B443002A030F /* MarvelViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3116641E26C6B443002A030F /* MarvelViewModel.swift */; };
 		3116642126C6B487002A030F /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3116642026C6B487002A030F /* BaseViewController.swift */; };
-		3116642326C6B577002A030F /* BaseResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3116642226C6B577002A030F /* BaseResponseModel.swift */; };
 		3116642526C6B59A002A030F /* MarvelResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3116642426C6B59A002A030F /* MarvelResponse.swift */; };
 		3116642726C6B652002A030F /* ResultModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3116642626C6B652002A030F /* ResultModel.swift */; };
 		3116642926C6BC8D002A030F /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3116642826C6BC8D002A030F /* API.swift */; };
@@ -51,7 +50,6 @@
 		3116641C26C6B42C002A030F /* MarvelViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarvelViewController.swift; sourceTree = "<group>"; };
 		3116641E26C6B443002A030F /* MarvelViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarvelViewModel.swift; sourceTree = "<group>"; };
 		3116642026C6B487002A030F /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
-		3116642226C6B577002A030F /* BaseResponseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseResponseModel.swift; sourceTree = "<group>"; };
 		3116642426C6B59A002A030F /* MarvelResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarvelResponse.swift; sourceTree = "<group>"; };
 		3116642626C6B652002A030F /* ResultModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultModel.swift; sourceTree = "<group>"; };
 		3116642826C6BC8D002A030F /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
@@ -129,7 +127,6 @@
 			isa = PBXGroup;
 			children = (
 				3116642026C6B487002A030F /* BaseViewController.swift */,
-				3116642226C6B577002A030F /* BaseResponseModel.swift */,
 			);
 			path = Base;
 			sourceTree = "<group>";
@@ -424,7 +421,6 @@
 			files = (
 				3116647E26CE9A1F002A030F /* ReviewViewController.swift in Sources */,
 				3116640026C6B2CB002A030F /* ViewController.swift in Sources */,
-				3116642326C6B577002A030F /* BaseResponseModel.swift in Sources */,
 				3116642726C6B652002A030F /* ResultModel.swift in Sources */,
 				3116643226C6C4B0002A030F /* MarvelListCollectionViewCell.swift in Sources */,
 				3116647B26CD6342002A030F /* MarvelGridCellModel.swift in Sources */,
